@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "tienda-angular"
+  "defaultProject": "tienda-angular",
+  "cli": {
+    "analytics": false
+  }
 }
