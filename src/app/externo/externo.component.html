@@ -1,1 +1,51 @@
-<p>externo works!</p>
+<div class="ctn-consulta">
+    <h1 class="title">Consulta en la base</h1>
+    <input type="text" placeholder="ID" [(ngModel)] = "idConsulta"/>
+    <input type="button" value="Consultar" (click)="upGradeUser()"/>
+    <table >
+        <tr *ngIf="usuarioConsulta">
+            <th>{{usuarioConsulta.id}}</th>
+            <th><img src="{{usuarioConsulta.avatar}}"/></th>
+            <th>{{usuarioConsulta.email}}</th>
+            <th>{{usuarioConsulta.first_name}} {{usuarioConsulta.last_name}}</th>
+        </tr>
+    </table>
+</div>
+<h1 class="title">Lista de usuarios</h1>
+<table class="ctn-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Avatar</th>
+            <th>Email</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios1">
+            <th>{{usuario.id}}</th>
+            <th><img src="{{usuario.avatar}}"/></th>
+            <th>{{usuario.email}}</th>
+            <th>{{usuario.first_name}} {{usuario.last_name}}</th>
+        </tr>
+    </tbody>
+</table>
+
+<table class="ctn-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Avatar</th>
+            <th>Email</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios2">
+            <th>{{usuario.id}}</th>
+            <th><img src="{{usuario.avatar}}"/></th>
+            <th>{{usuario.email}}</th>
+            <th>{{usuario.first_name}} {{usuario.last_name}}</th>
+        </tr>
+    </tbody>
+</table>
