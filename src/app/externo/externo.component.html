@@ -22,11 +22,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let usuario of usuarios1">
-            <th>{{usuario.id}}</th>
-            <th><img src="{{usuario.avatar}}"/></th>
-            <th>{{usuario.email}}</th>
-            <th>{{usuario.first_name}} {{usuario.last_name}}</th>
+        <tr *ngFor="let usuario1 of usuarios1" (click)="setIDAndUpgrade(usuario1.id - 1)">
+            <th>{{usuario1.id}}</th>
+            <th><img src="{{usuario1.avatar}}"/></th>
+            <th>{{usuario1.email}}</th>
+            <th>{{usuario1.first_name}} {{usuario1.last_name}}</th>
         </tr>
     </tbody>
 </table>
@@ -41,11 +41,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let usuario of usuarios2">
-            <th>{{usuario.id}}</th>
-            <th><img src="{{usuario.avatar}}"/></th>
-            <th>{{usuario.email}}</th>
-            <th>{{usuario.first_name}} {{usuario.last_name}}</th>
+        <tr *ngFor="let usuario2 of usuarios2" (click)="setIDAndUpgrade(usuario2.id - 1)">
+            <th>{{usuario2.id}}</th>
+            <th><img src="{{usuario2.avatar}}"/></th>
+            <th>{{usuario2.email}}</th>
+            <th>{{usuario2.first_name}} {{usuario2.last_name}}</th>
         </tr>
     </tbody>
 </table>

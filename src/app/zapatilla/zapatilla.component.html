@@ -1,5 +1,5 @@
 <div class="ctn-zapatos">
-    <h1 class="title">Zapatillas disponibles</h1>
+    <h1 class="title">{{"Zapatillas disponibles" | MayusInicial }}</h1>
     <table class="ctn-table">
         <thead>
             <tr>
@@ -20,7 +20,7 @@
     </table>
 </div>
 <div class="ctn-tops">
-    <h1 class="title">Nuestras marcas</h1>
+    <h1 class="title">{{"Nuestras marcas" | MayusInicial}}</h1>
     <ul>
         <li *ngFor="let marca of marcas">
             {{marca}}
@@ -31,7 +31,7 @@
             <span class="alertInput">{{mensajeAlertMarcas}}</span>
         </li>
     </ul>
-    <h1 class="title">Nuestras tiendas</h1>
+    <h1 class="title">{{"Nuestras tiendas" | MayusInicial}}</h1>
     <ul>
         <li *ngFor="let tienda of tiendas">
             {{tienda}}

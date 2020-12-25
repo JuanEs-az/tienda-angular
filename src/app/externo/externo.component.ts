@@ -20,6 +20,9 @@ export class ExternoComponent implements OnInit{
   upGradeUser():void{
     this.usuarioConsulta = this.usuarios[parseInt(this.idConsulta) - 1]
   }
+  setIDAndUpgrade(index){
+    this.usuarioConsulta = this.usuarios[parseInt(index)]
+  }
   ngOnInit(){
     //Extracción de los datos de la pagina 1
     this._externoService

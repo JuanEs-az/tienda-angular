@@ -10,7 +10,8 @@ img{
 .ctn-consulta{
     margin: 0px auto;
     width: 600px;
-    height: 200px
+    height: 200px;
+    margin-bottom: 10px;
 }
 .ctn-consulta input{
     display:block;

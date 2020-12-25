@@ -1,0 +1,33 @@
+<h1 class="title">Contacto</h1>
+
+<div class="ctn-form">
+    <h1 class="subtitle">Formulario de Trabajo</h1>
+    <form #formTrabajo="ngForm" (ngSubmit)="onSubmitTrabajo(formTrabajo)">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" #nombre2="ngModel" [(ngModel)]="trabajador.nombre" required />
+        <br/>
+        <span class="alertInput" *ngIf="nombre2.touched && !nombre2.valid">
+            Este campo "Nombre"  es obligatorio
+        </span>
+        <br/>
+
+        <label for="apellido">Apellido: </label>
+        <input type="text" name="apellido" #apellido2="ngModel" [(ngModel)]="trabajador.apellido" required/>
+        <br/>
+        <span class="alertInput" *ngIf="apellido2.touched && !apellido2.valid">
+            Este campo "Apellido" es obligatorio
+        </span>
+        <br/>
+
+        <label for="trabajo">Trabajo: </label>
+        <input type="text" name="trabajo" #job="ngModel" [(ngModel)]="trabajador.trabajo" required />
+        <br/>
+        <span class="alertInput" *ngIf="job.touched && !job.valid">
+            Este campo "Trabajo" es obligatorio
+        </span>
+        <br/>
+
+        <input type="submit" value="Enviar" [disabled]="!formTrabajo.form.valid"/>
+    </form>
+</div>
+<li *ngIf="data">Usuario: {{data.id}} | {{data.name}} | {{data.job}} | {{data.createdAt}}</li>
